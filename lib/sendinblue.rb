@@ -575,7 +575,7 @@ module Sendinblue
 		# @options data {Array} attachment: To send attachment/s generated on the fly you have to pass your attachment/s filename & its base64 encoded chunk data as an associative array [Optional]
 		def send_transactional_template(data)
 			id = data['id'].to_s
-			return self.put("template/" + id,data.to_json)
+			return self.post("template/" + id,data.to_json)
 		end
 
 		# Create and schedule your Trigger campaigns.
